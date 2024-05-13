@@ -1,0 +1,7 @@
+.main__content-card {
+     max-width: 400px;
+}
+
+.main__content-card ::ng-deep .mat-mdc-card-content {
+     padding: 16px;
+}
