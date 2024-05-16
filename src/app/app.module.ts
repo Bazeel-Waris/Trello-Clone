@@ -11,6 +11,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { MatCardModule } from '@angular/material/card';
 
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,9 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule, 
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
