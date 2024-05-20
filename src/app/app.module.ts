@@ -10,16 +10,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { MatCardModule } from '@angular/material/card';
-
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
+import { WorkspacesComponent } from './components/workspaces/workspaces.component';
+import { ActionButtonsComponent } from './components/action-buttons/action-buttons.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    MainContentComponent
+    MainContentComponent,
+    WorkspacesComponent,
+    ActionButtonsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatButtonModule, 
     MatCardModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
