@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LayoutService } from 'src/app/Services/layout.service';
 
 @Component({
   selector: 'app-board',
@@ -7,5 +6,5 @@ import { LayoutService } from 'src/app/Services/layout.service';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent {
-  
+
 }
