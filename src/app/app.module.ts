@@ -14,7 +14,12 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { WorkspacesComponent } from './components/workspaces/workspaces.component';
 import { ActionButtonsComponent } from './components/action-buttons/action-buttons.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { BoardComponent } from './components/board/board.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SidenavComponent } from './components/board/sidenav/sidenav.component';
+import { LayoutService } from './Services/layout.service';
+import { BoardContentComponent } from './components/board/board-content/board-content.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     SidebarComponent,
     MainContentComponent,
     WorkspacesComponent,
-    ActionButtonsComponent
+    ActionButtonsComponent,
+    BoardComponent,
+    SidenavComponent,
+    BoardContentComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +42,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatExpansionModule,
     MatDividerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule
   ],
   providers: [
-
+    // LayoutService,
   ],
   bootstrap: [AppComponent]
 })
