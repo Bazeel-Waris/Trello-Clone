@@ -1,0 +1,20 @@
+.list {
+     .card {
+          ::ng-deep .material-icons {
+               font-size: 14px !important;
+          }
+          ::ng-deep .mat-icon {
+               width: 14px !important;
+               height: 14px !important;
+          }
+     }
+     .add__card {
+          ::ng-deep .material-icons {
+               font-size: 20px !important;
+          }
+          ::ng-deep .mat-icon {
+               width: 20px !important;
+               height: 20px !important;
+          }
+     }
+}

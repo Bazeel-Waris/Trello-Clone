@@ -1,5 +1,5 @@
-<div class="board__sidenav border max-h-full h-[91vh] w-64">
-    <div class="flex items-center p-3 border-b min-h-[68px]">
+<div class="board__sidenav border w-64 bg-blue-200 relative h-full">
+    <div class="flex items-center px-3 min-h-16 border-b ">
         <div class="">
             <span class="rounded-md bg-purple-400 py-2 px-3 text-white font-semibold text-lg"> T </span>
         </div>
@@ -10,13 +10,13 @@
         </div>
     </div>
 
-    <div class="">
+    <div class="board__sidenav--menu fixed w-[18.55%] overflow-y-scroll">
         <!-- Add Board -->
         <div class="flex justify-between items-center p-3 pb-2">
             <span class="text-sm font-semibold">Your boards</span>
             <mat-icon>add</mat-icon>
         </div>
-        
+
         <!-- Current Active Boards -->
         <div class="flex items-center px-4 py-2 cursor-pointer hover:bg-slate-100">
             <span>
@@ -31,7 +31,7 @@
             </span>
             <span class="px-2 font-medium">Office</span>
         </div>
-        
+
         <div class="flex items-center px-4 py-2 cursor-pointer hover:bg-slate-100">
             <span>
                 <img class="max-w-7 h-6 rounded" src="assets/media/board-sm.webp" alt="">
@@ -40,5 +40,8 @@
         </div>
     </div>
 
-
+    <div class="flex justify-center items-center px-3 min-h-16 border-y absolute bottom-0 w-full bg-blue-200">
+        <button class="flex items-center bg-purple-500 p-2 rounded text-white w-full text-left"><mat-icon
+                class="mr-2">card_membership</mat-icon> Try Premium</button>
+    </div>
 </div>

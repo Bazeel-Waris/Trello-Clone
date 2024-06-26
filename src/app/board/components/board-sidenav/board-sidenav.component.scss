@@ -1,0 +1,18 @@
+.board__sidenav {
+     .board__sidenav--menu {
+          height: calc(100vh - 176px);
+     }
+     
+     .board__sidenav--menu::-webkit-scrollbar {
+          width: 0;
+     }
+
+     ::ng-deep .material-icons {
+          font-size: 18px !important;
+     }
+
+     ::ng-deep .mat-icon {
+          width: 18px !important;
+          height: 18px !important;
+     }
+}

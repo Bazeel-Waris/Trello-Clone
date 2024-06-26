@@ -6,6 +6,7 @@ import { BoardContentComponent } from './components/board-content/board-content.
 import { BoardRoutingModule } from './board-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { BoardHeaderComponent } from './components/board-header/board-header.component';
+import { BoardListComponent } from './components/board-list/board-list.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { BoardHeaderComponent } from './components/board-header/board-header.com
     BoardSidenavComponent,
     BoardContentComponent,
     BoardHeaderComponent,
+    BoardListComponent,
   ],
   imports: [
     CommonModule,
