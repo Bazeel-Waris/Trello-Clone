@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { BoardService } from 'src/app/Services/board.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-workspaces',
@@ -7,14 +6,5 @@ import { BoardService } from 'src/app/Services/board.service';
   styleUrls: ['./workspaces.component.scss']
 })
 export class WorkspacesComponent {
-     boardService = inject(BoardService);
 
-     ngOnInit() {
-
-          this.boardService.getAllBoards().subscribe(res => {
-
-               console.log(res);
-          })
-          
-     }
 }
