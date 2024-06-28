@@ -7,6 +7,7 @@ import { BoardRoutingModule } from './board-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { BoardHeaderComponent } from './components/board-header/board-header.component';
 import { BoardListComponent } from './components/board-list/board-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BoardListComponent } from './components/board-list/board-list.component
   imports: [
     CommonModule,
     BoardRoutingModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ]
 })
 export class BoardModule { }

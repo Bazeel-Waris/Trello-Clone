@@ -1,7 +1,20 @@
 <div class="board__header bg-sky-200 flex justify-between pl-8 pr-3 min-h-16 items-center border-b">
 
      <div class="flex items-center">
-          <span class="hover:bg-slate-100 cursor-pointer rounded-md mx-1 px-2 py-1 text-lg font-bold">{{ board?.name }}</span>
+          <div class="">
+               <!-- Board Name -->
+               <span *ngIf="!editMode" 
+                    (click)="editBoardName()"
+                    class="hover:bg-slate-100 cursor-pointer rounded-md mx-1 px-2 py-1 text-lg font-bold">
+                    {{ board?.name }} 
+               </span>
+               <!-- Edit Board Name -->
+               <input class="cursor-text rounded text-base text-center font-medium" 
+                    *ngIf="editMode"
+                    #boardName
+                    (keyup.enter)="submitUpdation(board?.id, boardName.value)"
+                    type="text" [value]="board?.name" [ngStyle]="{'width': board?.name.length + 'ch'}"/>
+          </div>
 
           <span class="flex items-center hover:bg-slate-100 cursor-pointer rounded-md mx-1 p-2 font-bold">
                <mat-icon>star_border</mat-icon>
@@ -19,7 +32,7 @@
           <button class="flex mx-2 bg-slate-100 px-3 py-2 rounded-md">
                <mat-icon class="w-4 mr-1">person_add</mat-icon> Share
           </button>
-          
+
           <span class="flex items-center hover:bg-slate-100 cursor-pointer rounded-md mx-1 p-2 font-bold">
                <mat-icon>more_horiz</mat-icon>
           </span>

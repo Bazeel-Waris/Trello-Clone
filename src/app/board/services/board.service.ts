@@ -15,8 +15,16 @@ export class BoardService {
   }
 
   getSingleBoard(id: string) {
-    let singleBoard = `${basicInfo.baseUrl}boards/${id}${basicInfo.credentials}`;
-    return this.http.get(singleBoard);
+    let singleBoardApi = `${basicInfo.baseUrl}boards/${id}${basicInfo.credentials}`;
+    return this.http.get(singleBoardApi);
+  }
+
+  updateABoard(boardId: string, updatedData: string) {
+    let updateBoardApi = `${basicInfo}boards/${boardId}${basicInfo.credentials}`;
+    let params = {
+      name: updatedData,
+    }
+    return this.http.put(updateBoardApi, {params: params});
   }
 
   getListsOnABoard(boardId: string) {
