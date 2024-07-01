@@ -1,3 +1,11 @@
 .board__content {
      height: calc(100vh - 120px);
+
+     ::ng-deep .mat-icon {
+          width: 20px;
+          height: 20px;
+     }
+     ::ng-deep .material-icons {
+          font-size: 19px;
+     }
 }

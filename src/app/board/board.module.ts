@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { BoardHeaderComponent } from './components/board-header/board-header.component';
 import { BoardListComponent } from './components/board-list/board-list.component';
 import { FormsModule } from '@angular/forms';
+import { AddListCardComponent } from './components/board-list/add-list-card/add-list-card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     BoardContentComponent,
     BoardHeaderComponent,
     BoardListComponent,
+    AddListCardComponent,
   ],
   imports: [
     CommonModule,

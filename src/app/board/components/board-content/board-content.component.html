@@ -10,14 +10,45 @@
         [list]="list">
     </app-board-list>
 
-    <!-- Add List Button -->
+    <!-- Add List section -->
     <div class="">
-        <div class="hover:bg-slate-200 bg-slate-300 rounded-lg flex items-center cursor-pointer w-64 mx-2 font-medium p-2">
+
+        <!-- Add List Button -->
+        <div *ngIf="!addList" 
+            (click)="addName()" 
+            class="hover:bg-slate-200 bg-slate-300 rounded-lg flex items-center cursor-pointer w-64 mx-2 font-medium p-2">
             <span class="flex items-center text-slate-600 rounded-md mx-1">
                 <mat-icon>add</mat-icon>
             </span>
             <span class="text-slate-600">Add a card</span>
         </div>
+
+        <!-- Add/Create List Name -->
+        <div *ngIf="addList" 
+            class="bg-slate-200 rounded-xl w-64 mx-2 font-medium p-2 flex flex-col gap-2"            
+        >
+
+            <span class="flex w-full text-slate-600">
+                <input #addListInput
+                    placeholder="Enter list title..."
+                    type="text" 
+                    class="w-full p-1 outline-none rounded-md border-gray-400 border-2 focus:border-blue-600">
+            </span>
+
+            <!-- AddList & Cancel List Button -->
+            <span class="flex gap-2 items-center">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-md py-2 px-3"
+                    (click)="createList()">
+                    Add List
+                </button>
+                
+                <button class="hover:bg-slate-300 flex items-center justify-center rounded-md p-2"
+                    (click)="addList=false">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </span>
+        </div>
+
     </div>
     
 </div>

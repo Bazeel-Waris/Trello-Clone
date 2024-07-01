@@ -1,19 +1,21 @@
 <div class="board__header bg-sky-200 flex justify-between pl-8 pr-3 min-h-16 items-center border-b">
 
      <div class="flex items-center">
-          <div class="">
+          <div class=" cursor-pointer rounded-md mx-1 text-lg font-bold">
                <!-- Board Name -->
                <span *ngIf="!editMode" 
                     (click)="editBoardName()"
-                    class="hover:bg-slate-100 cursor-pointer rounded-md mx-1 px-2 py-1 text-lg font-bold">
+                    class="hover:bg-slate-100 px-2 py-1 rounded w-full">
                     {{ board?.name }} 
                </span>
                <!-- Edit Board Name -->
-               <input class="cursor-text rounded text-base text-center font-medium" 
+               <input class="cursor-text rounded px-2 w-full" 
                     *ngIf="editMode"
                     #boardName
+                    (blur)="submitUpdation(board?.id, boardName.value)"
                     (keyup.enter)="submitUpdation(board?.id, boardName.value)"
-                    type="text" [value]="board?.name" [ngStyle]="{'width': board?.name.length + 'ch'}"/>
+                    type="text" [value]="board?.name" />
+                    <!-- [ngStyle]="{'width': board?.name.length + 'ch'}" -->
           </div>
 
           <span class="flex items-center hover:bg-slate-100 cursor-pointer rounded-md mx-1 p-2 font-bold">

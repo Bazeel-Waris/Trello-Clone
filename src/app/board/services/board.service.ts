@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { basicInfo } from '../../../environments/environment'
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,11 +20,16 @@ export class BoardService {
   }
 
   updateABoard(boardId: string, updatedData: string) {
-    let updateBoardApi = `${basicInfo}boards/${boardId}${basicInfo.credentials}`;
-    let params = {
-      name: updatedData,
-    }
-    return this.http.put(updateBoardApi, {params: params});
+    let updateBoardApi = `${basicInfo.baseUrl}boards/${boardId}`;
+    
+    let payload = { };
+
+    let params = new HttpParams()
+    .set("name",updatedData)
+    .set("key",'e3e6cd7361f26d29b658321dd3a5f2ae')
+    .set("token",'ATTAd83469947601f7fd977d4b1e8652af933b6f0d8a8707b5d3654e736f5ddd9fc2EE967AF6');
+
+    return this.http.put(updateBoardApi, payload, {params: params});
   }
 
   getListsOnABoard(boardId: string) {

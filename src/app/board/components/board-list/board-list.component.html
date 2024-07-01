@@ -1,9 +1,12 @@
 <div class="list border rounded-2xl py-2 bg-slate-100 w-64 mx-2 max-h-[100vh]">
 
     <!-- List Title Section -->
-    <div class="flex items-center justify-between cursor-pointer px-3">
-        <span class="font-medium text-slate-700">{{ list.name }}</span>
-        <span class="flex items-center hover:bg-slate-300 text-slate-500 rounded-md p-1 font-bold">
+    <div class="flex items-center justify-between cursor-pointer px-2">
+        <!-- List Name -->
+        <span class="font-medium text-slate-700 px-3">{{ list.name }}</span>
+        <!-- List Delete Button -->
+        <span (click)="listOptions()"
+            class="flex items-center hover:bg-slate-300 text-slate-500 rounded-md p-1 font-bold">
             <mat-icon>more_horiz</mat-icon>
         </span>
     </div>
@@ -20,11 +23,14 @@
                 </span>
             </div>
         </div>
+
+        <!-- Component to add Card -->
+        <app-add-list-card></app-add-list-card>
     </div>
 
     <!-- Add Card Button -->
-    <div class="add__card hover:bg-slate-300 mt-2 mx-3 rounded-xl">
-        <div class="flex items-center cursor-pointer font-medium p-2">
+    <div class="add__card px-2 pt-1">
+        <div class="flex items-center rounded-lg hover:bg-slate-300 cursor-pointer font-medium px-1 py-2">
             <span class="flex items-center text-slate-600 rounded-md mx-1">
                 <mat-icon>add</mat-icon>
             </span>
