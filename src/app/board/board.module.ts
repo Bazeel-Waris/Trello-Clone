@@ -9,6 +9,8 @@ import { BoardHeaderComponent } from './components/board-header/board-header.com
 import { BoardListComponent } from './components/board-list/board-list.component';
 import { FormsModule } from '@angular/forms';
 import { AddListCardComponent } from './components/board-list/add-list-card/add-list-card.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CardModule } from '../card/card.module';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,15 @@ import { AddListCardComponent } from './components/board-list/add-list-card/add-
     BoardHeaderComponent,
     BoardListComponent,
     AddListCardComponent,
+
   ],
   imports: [
     CommonModule,
     BoardRoutingModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    CardModule,
+    MatDialogModule
   ]
 })
 export class BoardModule { }

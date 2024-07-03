@@ -22,7 +22,6 @@ export class BoardHeaderComponent {
 
   submitUpdation(boardId: string, updatedData: string) {
     this.boardService.updateABoard(boardId, updatedData).subscribe(res => {
-      console.log(res)
       this.board = res;
       this.editMode = false;
     });
