@@ -17,6 +17,7 @@ import { ActionButtonsComponent } from './components/action-buttons/action-butto
 import { HttpClientModule } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BoardModule } from './board/board.module';
+import { CardModule } from './card/card.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BoardModule } from './board/board.module';
     MatDividerModule,
     HttpClientModule,
     MatSidenavModule,
-    BoardModule
+    BoardModule,
+    // CardModule
   ],
   providers: [
 

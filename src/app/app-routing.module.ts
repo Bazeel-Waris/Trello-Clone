@@ -5,6 +5,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 const routes: Routes = [
   { path: '', component: MainContentComponent},
   { path: 'b', loadChildren: () => import('./board/board.module').then(m => m.BoardModule) },
+  { path: 'c', loadChildren: () => import('./card/card.module').then(m => m.CardModule) },
   //  { path: 'boards', component: WorkspacesComponent },
 ];
 
