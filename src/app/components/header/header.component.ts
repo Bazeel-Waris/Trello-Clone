@@ -8,4 +8,8 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class HeaderComponent {
   createBoardFlag: boolean = true;
+
+  closingCreateBoardCard(event: any) {
+    this.createBoardFlag = event;
+  }
 }

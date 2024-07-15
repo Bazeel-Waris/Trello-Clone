@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BoardModule } from './board/board.module';
 import { CardModule } from './card/card.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CardModule } from './card/card.module';
     MatDividerModule,
     HttpClientModule,
     MatSidenavModule,
-    // BoardModule
+    BoardModule,
+    SharedModule
   ],
   providers: [
 
