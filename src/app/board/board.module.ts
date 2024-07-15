@@ -7,10 +7,16 @@ import { BoardRoutingModule } from './board-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { BoardHeaderComponent } from './components/board-header/board-header.component';
 import { BoardListComponent } from './components/board-list/board-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddListCardComponent } from './components/board-list/add-list-card/add-list-card.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { CardModule } from '../card/card.module';
+import { CreateBoardComponent } from './components/create-board/create-board.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule} from '@angular/material/select';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,7 @@ import { CardModule } from '../card/card.module';
     BoardHeaderComponent,
     BoardListComponent,
     AddListCardComponent,
+    CreateBoardComponent,
 
   ],
   imports: [
@@ -28,7 +35,13 @@ import { CardModule } from '../card/card.module';
     MatIconModule,
     FormsModule,
     CardModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatProgressSpinnerModule
   ]
 })
 export class BoardModule { }

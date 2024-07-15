@@ -1,4 +1,5 @@
 <div class="board__sidenav border w-64 bg-blue-200 relative h-full">
+    <!-- SideNav Header  -->
     <div class="flex items-center px-3 min-h-16 border-b ">
         <div class="">
             <span class="rounded-md bg-purple-400 py-2 px-3 text-white font-semibold text-lg"> T </span>
@@ -14,24 +15,35 @@
         <!-- Add Board -->
         <div class="flex justify-between items-center p-3 pb-2">
             <span class="text-sm font-semibold">Your boards</span>
-            <mat-icon>add</mat-icon>
+            <span class="cursor-pointer hover:bg-gray-200 transition-all duration-300 flex items-center p-[2px] rounded"
+                (click)="createBoardFlag = !createBoardFlag">
+                <mat-icon>add</mat-icon>
+            </span>
         </div>
 
+        <app-create-board class="fixed left-64"
+            #createBoardCard 
+            *ngIf="createBoardFlag" 
+            (closeCreateBoardCard)="closingCreateBoardCard($event)">
+        </app-create-board>
+
         <!-- Current created/Available Boards -->
-        <!-- <div [routerLink]="['/b', board.shortLink, board.name.toLowerCase()]" -->
-        <div (click)="openBoard(board)"
+        <div [routerLink]="['/b', board.shortLink, board.name.toLowerCase()]"
+            [routerLinkActive]="'active'"
+            (click)="openBoard(board)"
             *ngFor="let board of availableBoards" 
-            class="flex items-center px-4 py-2 cursor-pointer hover:bg-slate-100">
+            class="flex items-center px-4 py-2 cursor-pointer transition-all duration-300 hover:bg-purple-200">
             <span>
-                <img class="max-w-7 w-6 h-5 rounded-sm" [src]="board.prefs.backgroundImage" alt="">
+                <img class="max-w-7 w-6 h-5 rounded-sm" [src]="board.prefs.backgroundImage ? board.prefs.backgroundImage: '../../../../assets/logos/Trello_logo.svg'" alt="">
             </span>
             <span class="px-2 font-medium">{{ board.name }}</span>
         </div>
-
     </div>
 
+    <!-- Try Premium Button -->
     <div class="flex justify-center items-center px-3 min-h-16 border-y absolute bottom-0 w-full bg-blue-200">
         <button class="flex items-center bg-purple-500 p-2 rounded text-white w-full text-left"><mat-icon
                 class="mr-2">card_membership</mat-icon> Try Premium</button>
     </div>
 </div>
+

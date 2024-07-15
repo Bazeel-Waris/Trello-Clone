@@ -7,4 +7,5 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  createBoardFlag: boolean = true;
 }
