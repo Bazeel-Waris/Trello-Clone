@@ -11,12 +11,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddListCardComponent } from './components/board-list/add-list-card/add-list-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CardModule } from '../card/card.module';
-import { CreateBoardComponent } from './components/create-board/create-board.component';
+// import { CreateBoardComponent } from './components/create-board/create-board.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule} from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     BoardHeaderComponent,
     BoardListComponent,
     AddListCardComponent,
-    CreateBoardComponent,
+    // CreateBoardComponent,
 
   ],
   imports: [
@@ -41,7 +42,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    SharedModule
   ]
 })
 export class BoardModule { }

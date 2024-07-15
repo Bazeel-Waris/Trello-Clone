@@ -39,8 +39,7 @@ import { CardModule } from './card/card.module';
     MatDividerModule,
     HttpClientModule,
     MatSidenavModule,
-    BoardModule,
-    // CardModule
+    // BoardModule
   ],
   providers: [
 
