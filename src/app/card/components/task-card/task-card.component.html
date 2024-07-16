@@ -5,7 +5,7 @@
 
           <!-- Task Card -->
           <section class="w-[57.5%] bg-white p-2 rounded-2xl">
-              
+
                <!-- Task Card head Section -->
                <div class="flex justify-between text-gray-600">
                     <div class="flex">
@@ -24,23 +24,84 @@
                     </div>
                </div>
 
-               <!-- Title Card Description Section -->
-                <div class="flex items-start justify-between text-gray-600">
-                    <div class="flex">
-                         <span class="px-2">
-                              <mat-icon>sort</mat-icon>
-                         </span>
+               <div class="mt-12 flex">
+                    <!-- Left Side -->
+                    <div class="w-4/5">
+                         <!-- Title Card Description Section -->
+                         <div class="flex items-start justify-between text-blue-900 ">
+                              <div class="flex ">
+                                   <span class="px-2 text-blue-900">
+                                        <mat-icon>sort</mat-icon>
+                                   </span>
 
-                         <div class="flex flex-col">
-                              <span class="font-medium text-gray-500 text-lg">Description</span>
-                              <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, nisi.</span>
+                                   <div class="flex flex-col text-blue-900">
+                                        <span class="font-medium text-lg">Description</span>
+                                        <span class="text-sm">Lorem ipsum dolor sit amet consectetur,
+                                             adipisicing elit. Cum, nisi.</span>
+                                   </div>
+                              </div>
+
+                              <div class="cursor-pointer bg-slate-200 py-2 px-4 rounded hover:bg-slate-300">
+                                   <button>Edit</button>
+                              </div>
+                         </div>
+
+                         <!-- Title Card Activity -->
+                         <div class="flex items-start justify-between text-blue-900 ">
+                              <div class="flex ">
+                                   <span class="px-2 text-blue-900">
+                                        <mat-icon>sort</mat-icon>
+                                   </span>
+
+                                   <div class="flex flex-col text-blue-900">
+                                        <span class="font-medium text-lg">Activity</span>
+                                        <span class="text-sm">Lorem ipsum dolor sit amet consectetur,
+                                             adipisicing elit. Cum, nisi.</span>
+                                   </div>
+                              </div>
+
+                              <div class="cursor-pointer bg-slate-200 py-2 px-4 rounded hover:bg-slate-300">
+                                   <button>Hide Details</button>
+                              </div>
                          </div>
                     </div>
 
-                    <div class="cursor-pointer bg-slate-200 py-2 px-4 rounded hover:bg-slate-300">
-                         <button>Edit</button>
+                    <!-- Right side Part of Card -->
+                    <div class="task__Card flex flex-col gap-3 pl-3 w-1/5">
+                         <!-- Checklist -->
+                         <div class="text-blue-900 flex cursor-pointer bg-slate-200 p-2 rounded hover:bg-slate-300">
+                              <span class="flex items-center mx-1">
+                                   <mat-icon>playlist_add_check</mat-icon>
+                              </span>
+                              <button class="ml-2 font-medium">Checklist</button>
+                         </div>
+
+                         <!-- Attachment -->
+                         <div class="text-blue-900 flex cursor-pointer bg-slate-200 p-2 rounded hover:bg-slate-300">
+                              <span class="flex items-center mx-1">
+                                   <mat-icon>attach_file</mat-icon>
+                              </span>
+                              <button class="ml-2 font-medium">Attachment</button>
+                         </div>
+
+                         <!-- Delete Card -->
+                         <div class="text-blue-900 flex cursor-pointer bg-slate-200 p-2 rounded hover:bg-slate-300">
+                              <span class="flex items-center mx-1">
+                                   <mat-icon>delete_outline</mat-icon>
+                              </span>
+                              <button class="ml-2 font-medium">Delete</button>
+                         </div>
+
+                         <!-- Share Card -->
+                         <div class="text-blue-900 flex cursor-pointer bg-slate-200 p-2 rounded hover:bg-slate-300">
+                              <span class="flex items-center mx-1">
+                                   <mat-icon>share</mat-icon>
+                              </span>
+                              <button class="ml-2 font-medium">Share</button>
+                         </div>
+
                     </div>
-                </div>
+               </div>
           </section>
 
      </div>

@@ -31,10 +31,13 @@
             <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded">Create</button>
         </div>
     </div>
+
+    <!-- Create Board Card -->
     <app-create-board class="fixed top-[58px] left-80 z-50"
             *ngIf="createBoardFlag" 
             (closeCreateBoardCard)="closingCreateBoardCard($event)">
         </app-create-board>
+
     <div class="head__cta flex basis-full justify-end items-center">
         <span class="p-1 text-2xl flex items-center hover:bg-slate-200 cursor-pointer rounded-full"><mat-icon
                 class="">notifications_none</mat-icon></span>

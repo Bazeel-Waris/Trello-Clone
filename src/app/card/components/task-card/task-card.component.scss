@@ -1,0 +1,11 @@
+.task__Card {
+     ::ng-deep {
+          .mat-icon {
+               width: 16px !important;
+               height: 16px !important;
+          }
+          .material-icons {
+               font-size: 16px !important;
+          }
+     }
+}
