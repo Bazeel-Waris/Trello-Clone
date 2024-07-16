@@ -1,0 +1,39 @@
+.list {
+     .card {
+          ::ng-deep .material-icons {
+               font-size: 14px !important;
+          }
+
+          ::ng-deep .mat-icon {
+               width: 14px !important;
+               height: 14px !important;
+          }
+     }
+
+     .add__card {
+          ::ng-deep .material-icons {
+               font-size: 20px !important;
+          }
+
+          ::ng-deep .mat-icon {
+               width: 20px !important;
+               height: 20px !important;
+          }
+     }
+
+     .cards__container::-webkit-scrollbar {
+          width: 6px;
+     }
+
+     .cards__container::-webkit-scrollbar-track {
+          background: #dfdfdf54;
+     }
+
+     .cards__container::-webkit-scrollbar-thumb {
+          background: #d3d3d3;
+     }
+
+     .cards__container::-webkit-scrollbar-thumb:hover {
+          background: #bdbdbd;
+     }
+}

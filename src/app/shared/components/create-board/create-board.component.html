@@ -1,0 +1,28 @@
+<div class="create__board px-4 bg-white rounded-xl w-[125%] border-2 ">
+
+     <header class="flex py-3 justify-between items-center">
+          <h2 class="!mb-0">Create Board</h2>
+          <span class="cursor-pointer hover:bg-gray-200 transition-all duration-300 flex items-center p-1 rounded"
+               (click)="closingCreateBoardCard()">
+               <mat-icon>close</mat-icon>
+          </span>
+     </header>
+
+
+     <div class="flex flex-col py-4">
+          <mat-form-field appearance="outline" class="example-full-width">
+               <mat-label>Board Title</mat-label>
+               <input type="text" matInput [formControl]="boardTitleControl" [errorStateMatcher]="matcher">
+
+
+               <mat-error *ngIf="boardTitleControl.hasError('required')">Board Title is
+                    <strong>required</strong></mat-error>
+          </mat-form-field>
+
+          <button class="bg-blue-700 text-white font-medium py-2 text-base rounded hover:bg-blue-800"
+               (click)="createNewBoard()">
+                    Create
+          </button>
+     </div>
+
+</div>

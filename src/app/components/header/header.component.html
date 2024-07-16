@@ -1,4 +1,4 @@
-<div class="header flex justify-between p-2 border-b-2">
+<div class="header flex justify-between p-2 ">
 
     <div class="head__brand flex items-center">
         <div class="p-2 flex items-center cursor-pointer rounded-md hover:bg-slate-200 transition-all">
@@ -26,16 +26,22 @@
             <span>Templates</span>
             <mat-icon>expand_more</mat-icon>
         </div>
-        
-        <div class="mx-4">
-            <button mat-flat-button class="">Create</button>
+
+        <div class="mx-4" (click)="createBoardFlag = !createBoardFlag">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded">Create</button>
         </div>
     </div>
-
+    <app-create-board class="fixed top-[58px] left-80 z-50"
+            *ngIf="createBoardFlag" 
+            (closeCreateBoardCard)="closingCreateBoardCard($event)">
+        </app-create-board>
     <div class="head__cta flex basis-full justify-end items-center">
-        <span class="p-1 text-2xl flex items-center hover:bg-slate-200 cursor-pointer rounded-full"><mat-icon class="">notifications_none</mat-icon></span>
-        <span class="p-1 text-2xl flex items-center hover:bg-slate-200 cursor-pointer rounded-full"><mat-icon class="">help_outline</mat-icon></span>
-        <span class="p-1 text-2xl flex items-center hover:bg-slate-200 cursor-pointer rounded-full"><mat-icon class="">account_circle</mat-icon></span>
+        <span class="p-1 text-2xl flex items-center hover:bg-slate-200 cursor-pointer rounded-full"><mat-icon
+                class="">notifications_none</mat-icon></span>
+        <span class="p-1 text-2xl flex items-center hover:bg-slate-200 cursor-pointer rounded-full"><mat-icon
+                class="">help_outline</mat-icon></span>
+        <span class="p-1 text-2xl flex items-center hover:bg-slate-200 cursor-pointer rounded-full"><mat-icon
+                class="">account_circle</mat-icon></span>
     </div>
-   
+
 </div>

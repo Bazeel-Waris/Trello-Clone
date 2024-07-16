@@ -15,11 +15,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { WorkspacesComponent } from './components/workspaces/workspaces.component';
 import { ActionButtonsComponent } from './components/action-buttons/action-buttons.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BoardComponent } from './components/board/board.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { SidenavComponent } from './components/board/sidenav/sidenav.component';
-import { LayoutService } from './Services/layout.service';
-import { BoardContentComponent } from './components/board/board-content/board-content.component';
+import { BoardModule } from './board/board.module';
+import { CardModule } from './card/card.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -29,9 +28,6 @@ import { BoardContentComponent } from './components/board/board-content/board-co
     MainContentComponent,
     WorkspacesComponent,
     ActionButtonsComponent,
-    BoardComponent,
-    SidenavComponent,
-    BoardContentComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +39,12 @@ import { BoardContentComponent } from './components/board/board-content/board-co
     MatExpansionModule,
     MatDividerModule,
     HttpClientModule,
-    MatSidenavModule
+    MatSidenavModule,
+    BoardModule,
+    SharedModule
   ],
   providers: [
-    // LayoutService,
+
   ],
   bootstrap: [AppComponent]
 })
