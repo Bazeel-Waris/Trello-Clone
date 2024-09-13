@@ -13,21 +13,22 @@
     <!-- Add List section -->
     <div class="">
 
-        <!-- Add List Button -->
+        <!-- Button to display  Add/create Card-->
         <div *ngIf="!addList" 
             (click)="addName()" 
             class="hover:bg-slate-200 bg-slate-300 rounded-lg flex items-center cursor-pointer w-64 mx-2 font-medium p-2">
             <span class="flex items-center text-slate-600 rounded-md mx-1">
                 <mat-icon>add</mat-icon>
             </span>
-            <span class="text-slate-600">Add a card</span>
+            <span class="text-slate-600">Add another list</span>
         </div>
 
-        <!-- Add/Create List Name -->
+        <!-- Add / Create List Section -->
         <div *ngIf="addList" 
             class="bg-slate-200 rounded-xl w-64 mx-2 font-medium p-2 flex flex-col gap-2"            
         >
-
+            Add List 
+            <!-- Input for List Title Name -->
             <span class="flex w-full text-slate-600">
                 <input #addListInput
                     placeholder="Enter list title..."

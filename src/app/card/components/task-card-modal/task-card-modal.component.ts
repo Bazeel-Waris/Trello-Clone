@@ -7,5 +7,7 @@ import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
   styleUrls: ['./task-card-modal.component.scss']
 })
 export class TaskCardModalComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: MatDialog) {}
+  constructor(private dialog:MatDialog) {
+    
+  }
 }

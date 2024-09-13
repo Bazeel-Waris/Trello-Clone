@@ -3,6 +3,7 @@ import { BoardService } from '../../services/board.service';
 import { ListService } from '../../services/list.service';
 import { MatDialog } from '@angular/material/dialog';
 import { TaskCardModalComponent } from '../../../card/components/task-card-modal/task-card-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-board-list',
@@ -23,9 +24,10 @@ export class BoardListComponent {
 
   public editList: boolean = false;
 
-  constructor(public dialog: MatDialog, private boardService: BoardService, private listService: ListService) {}
+  constructor(private router:Router,public dialog: MatDialog, private boardService: BoardService, private listService: ListService) {}
 
   openTaskCard() {
+    this.router.navigate(['c/id/name']);
     this.dialog.open(TaskCardModalComponent, {
       width: '60%',
       data: {
@@ -56,11 +58,9 @@ export class BoardListComponent {
   }
 
   submitListUpdation(listId: string) {
-    
-      console.log(listId);
+
     this.listService.updateList(listId, this.editListInput.nativeElement.value).subscribe(res => {
       this.list = res;
-      console.log(this.list);
       this.editList = false;
     });
   }

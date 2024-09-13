@@ -6,12 +6,11 @@
         <span *ngIf="!editList" (click)="editListName()" class="font-medium text-slate-700 w-full px-3">
             {{ list.name }}
         </span>
-        <span class="font-medium text-slate-700 w-full">
-            <input *ngIf="editList" 
-                (blur)="submitListUpdation(list.id)"
+        <span *ngIf="editList" class="font-medium text-slate-700 w-full">
+            <input (blur)="submitListUpdation(list.id)"
                 (keyup.enter)="submitListUpdation(list.id)"
                 type="text" #editListInput 
-                class="w-full h-7 focus:outline-blue-500 rounded p-2">
+                class="w-full h-7 focus:outline-blue-500 rounded px-3 py-2">
         </span>
 
         <!-- List Delete Button -->

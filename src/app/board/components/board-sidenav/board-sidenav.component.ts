@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { BoardService } from '../../services/board.service';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./board-sidenav.component.scss']
 })
 export class BoardSidenavComponent implements OnInit {
- 
+  
   public availableBoards: any[] = [];
 
   public board: any;

@@ -1,6 +1,6 @@
 <div class="board__sidenav border w-64 bg-blue-200 relative h-full">
     <!-- SideNav Header  -->
-    <div class="flex items-center px-3 min-h-16 border-b ">
+    <div appHighlight class="flex items-center px-3 min-h-16 border-b ">
         <div class="">
             <span class="rounded-md bg-purple-400 py-2 px-3 text-white font-semibold text-lg"> T </span>
         </div>
@@ -30,13 +30,21 @@
         <!-- Current created/Available Boards -->
         <div [routerLink]="['/b', board.shortLink, board.name.toLowerCase()]"
             [routerLinkActive]="'active'"
-            (click)="openBoard(board)"
+            (click)="openBoard(board)" setBackGround="green"
             *ngFor="let board of availableBoards" 
             class="flex items-center px-4 py-2 cursor-pointer transition-all duration-300 hover:bg-purple-200">
             <span>
                 <img class="max-w-7 w-6 h-5 rounded-sm" [src]="board.prefs.backgroundImage ? board.prefs.backgroundImage: '../../../../assets/logos/Trello_logo.svg'" alt="">
             </span>
             <span class="px-2 font-medium">{{ board.name }}</span>
+        </div>
+
+        <div setBackGround="yellow"
+            class="flex items-center px-4 py-2 cursor-pointer transition-all duration-300 hover:bg-purple-200">
+            <span>
+                <img class="max-w-7 w-6 h-5 rounded-sm" [src]="'../../../../assets/logos/Trello_logo.svg'" alt="">
+            </span>
+            <span class="px-2 font-medium">Title of Board</span>
         </div>
     </div>
 

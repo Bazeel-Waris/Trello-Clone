@@ -18,6 +18,8 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule} from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SharedModule } from '../shared/shared.module';
+import { SetBackGroundDirective } from './directives/set-back-ground.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { SharedModule } from '../shared/shared.module';
     BoardHeaderComponent,
     BoardListComponent,
     AddListCardComponent,
+    SetBackGroundDirective,
+    HighlightDirective,
     // CreateBoardComponent,
 
   ],
